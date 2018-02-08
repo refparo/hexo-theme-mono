@@ -1,5 +1,7 @@
-ol
-  - page.posts.each((post) => {
-    li
-      a(href=url_for(post.path))= post.title
-  - })
+extends base
+block main
+  ol
+    - page.posts.each((post) => {
+      li
+        a(href=url_for(post.path))= post.title
+    - })
