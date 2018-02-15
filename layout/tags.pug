@@ -1,0 +1,7 @@
+extends _base.pug
+block header
+  h1 标签
+block main
+  - site.tags.each(tag => {
+    a.tag(href=url_for(tag.path))= "#" + tag.name
+  - })

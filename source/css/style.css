@@ -1,0 +1,140 @@
+@import url("//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");
+@import url("custom.css");
+
+:root {
+  --theme-color-h: 0;
+  --theme-color-s: 4%;
+  --font-family: 'Segoe UI', Helvetica, Tahoma,
+    'PingFang SC', 'WenQuanYi Micro Hei', 'Microsoft Yahei UI', sans-serif;
+  --mono-font-family: Monaco, Consolas, 'Lucida Console',
+    'PingFang SC', 'WenQuanYi Micro Hei', 'Microsoft Yahei UI', monospace;
+  --sidebar-width: 16.7vw;
+  --color-0: hsl(var(--theme-color-h), var(--theme-color-s), 10%);
+  --color-1: hsl(var(--theme-color-h), var(--theme-color-s), 20%);
+  --color-2: hsl(var(--theme-color-h), var(--theme-color-s), 40%);
+  --color-3: hsl(var(--theme-color-h), var(--theme-color-s), 80%);
+  --color-4: hsl(var(--theme-color-h), var(--theme-color-s), 98%);
+}
+
+aside {
+  position: fixed;
+  width: var(--sidebar-width);
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--color-1);
+}
+
+main {
+  margin-left: var(--sidebar-width);
+  padding: 5vw 12vw;
+}
+
+header > h1 {
+  font-size: 2.5em;
+  color: var(--color-2);
+}
+
+article {
+  margin-bottom: 5vw;
+}
+
+article > h1 {
+  color: black;
+}
+
+.meta, #footer-info {
+  color: var(--color-2);
+  font-size: 11pt;
+}
+
+.meta > hr {
+  display: inline;
+  margin: 0 2pt;
+  border-width: 1px;
+}
+
+.tag, nav#paginator > * {
+  margin: 0 2pt;
+}
+
+#footer-info {
+  margin-top: 5vw;
+  text-align: center;
+}
+
+body {
+  background-color: var(--color-4);
+  color: var(--color-0);
+  line-height: normal;
+  font-family: var(--font-family);
+}
+
+h1 {
+  font-weight: normal;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: var(--color-1);
+}
+
+hr {
+  margin: 2em 0;
+  border-width: 2px;
+  border-color: var(--color-3);
+  border-style: solid;
+}
+
+a {
+  color: var(--color-2);
+  text-decoration-style: dashed;
+}
+
+a:hover {
+  color: black;
+  text-decoration-style: solid;
+}
+
+img {
+  width: 100%;
+}
+
+blockquote {
+  border-left: var(--color-1) solid;
+  padding-left: 1em;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+thead {
+  border-bottom: 3px solid var(--color-3);
+  text-align: auto;
+}
+
+tr {
+  border-bottom: 1px solid var(--color-3);
+}
+
+th, td {
+  padding: 6px;
+  text-align: left;
+}
+
+code, pre {
+  font-family: var(--mono-font-family);
+}
+
+.highlight {
+  overflow-x: auto;
+  line-height: 1.3em;
+  padding: 0 0.5em;
+}
+
+.highlight td {
+  padding: 0 0.5em;
+}
+
+.highlight tr {
+  border: none;
+}

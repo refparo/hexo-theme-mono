@@ -1,0 +1,11 @@
+extends _base.pug
+block header
+  h1= page.title
+block main
+  include _include/mixins.pug
+  article
+    +hljs_fix(page.content)
+prepend footer
+  if site.data.mono.comment
+    #comment
+      != site.data.mono.comment.replace("", "")

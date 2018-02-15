@@ -1,7 +1,21 @@
-extends base
+extends _base.pug
+block header
+  h1 主页
 block main
-  ol
-    - page.posts.each((post) => {
-      li
+  include _include/mixins.pug
+  - page.posts.each(post => {
+    article
+      h1
         a(href=url_for(post.path))= post.title
-    - })
+      +meta(post)
+      if post.excerpt
+        +hljs_fix(post.excerpt)
+        a(href=url_for(post.path) + "#more") 继续阅读»
+      else
+        +hljs_fix(post.content)
+        if site.data.mono.comment
+          a(href=url_for(post.path) + "#comment") 前往评论»
+  - })
+  if page.total > 1
+    nav#paginator
+      != paginator({prev_text: "« prev", next_text: "next »"})

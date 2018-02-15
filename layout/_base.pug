@@ -1,0 +1,35 @@
+doctype html
+html(lang=config.language)
+  head
+    include _include/head.pug
+  body
+    aside
+      include _include/sidebar.pug
+    main
+      header
+        block header
+      block main
+      footer
+        block footer
+          #footer-info
+            if site.data.mono.copyright
+              != site.data.mono.copyright
+            else
+              | ©
+              |
+              = date(new Date(), 'YYYY')
+              |
+              |
+              if config.author
+                = config.author
+              else
+                = config.title
+            br
+            | Powered by
+            |
+            a(href="//hexo.io/" target= "_blank") Hexo
+            |
+            | and
+            |
+            a(href="//github.com/problem233/hexo-theme-mono") hexo-theme-mono
+            | .

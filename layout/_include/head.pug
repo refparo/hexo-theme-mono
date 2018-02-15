@@ -5,5 +5,8 @@ title
   if page.title
     = page.title + ' | '
   = config.title
-!= css('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min')
+if site.data.mono.icon
+  link(rel="shortcut icon" href=site.data.mono.icon type="image/x-icon")
+if site.data.mono.katex
+  != css(site.data.mono.katex)
 != css('/css/style')

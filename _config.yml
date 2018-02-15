@@ -1,0 +1,20 @@
+# 边栏菜单
+menu:
+  主页: /
+  标签: /tags/
+  关于: /about/
+
+# 头像
+avatar:
+
+# 社交链接
+social_links:
+
+# 图标
+icon: /favicon.ico
+
+# 评论代码
+comment:
+
+# 版权
+copyright:
