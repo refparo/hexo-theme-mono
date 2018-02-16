@@ -8,5 +8,20 @@ title
 if site.data.mono.icon
   link(rel="shortcut icon" href=site.data.mono.icon type="image/x-icon")
 if site.data.mono.katex
-  != css(site.data.mono.katex)
+  != js(`//cdnjs.cloudflare.com/ajax/libs/KaTeX/${site.data.mono.katex}/katex.min`)
+  != js(`//cdnjs.cloudflare.com/ajax/libs/KaTeX/${site.data.mono.katex}/contrib/auto-render.min`)
+  != css(`//cdnjs.cloudflare.com/ajax/libs/KaTeX/${site.data.mono.katex}/katex.min.css`)
+  -
+    const scriptCode = `
+      document.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+          throwOnError: false,
+          delimiters: [
+            { left: '\$\$', right: '\$\$', display: true},
+            { left: '\$', right: '\$', display: false}
+          ]
+        })
+      })
+    `
+  script!= scriptCode
 != css('/css/style')
