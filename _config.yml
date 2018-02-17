@@ -1,23 +1,25 @@
-# 边栏菜单
+# Sidebar menu
 menu:
-  主页: /
-  标签: /tags/
-  关于: /about/
+  Home: /
+  Tags: /tags/
+  About: /about/
 
-# 头像
+# Avatar
+# This must be exist.
 avatar:
 
-# 社交链接
 social_links:
 
-# 图标
 icon: /favicon.ico
 
-# KaTeX 版本
+# KaTeX version
+# Leave it blank if you don't need KaTeX
 katex:
 
-# 评论代码，`MONOPAGEID` 会被自动替换为页面 ID
+# HTML code of comment area
+# `MONOPAGEID` will be replaced to the ID of the page
 comment:
 
-# 版权
+# HTML code of the copyright info
+# Theme will use an auto-generated value if you leave it empty
 copyright:
