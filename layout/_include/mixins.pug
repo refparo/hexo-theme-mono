@@ -7,10 +7,11 @@ mixin hljs_fix(content)
       new RegExp(escapeRegExp(`<figure class="highlight`), 'g'),
       `<figure class="hljs highlight`)
   != fixed
+
 mixin meta(post)
   .meta
     time(datetime=post.date.format("YYYY-MM-DD"))
-      = post.date.format("Y-MM-DD")
+      = date(post.date)
     hr
     - post.tags.each(tag => {
       a.tag(href=url_for(tag.path))= "#" + tag.name
