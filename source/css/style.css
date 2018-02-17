@@ -1,6 +1,3 @@
-@import url("//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");
-@import url("custom.css");
-
 :root {
   --theme-color-h: 0;
   --theme-color-s: 4%;
@@ -8,13 +5,14 @@
     'PingFang SC', 'WenQuanYi Micro Hei', 'Microsoft Yahei UI', sans-serif;
   --mono-font-family: Monaco, Consolas, 'Lucida Console',
     'PingFang SC', 'WenQuanYi Micro Hei', 'Microsoft Yahei UI', monospace;
-  --sidebar-width: 16.7vw;
+  --sidebar-width: 16em;
   --color-0: hsl(var(--theme-color-h), var(--theme-color-s), 10%);
   --color-1: hsl(var(--theme-color-h), var(--theme-color-s), 20%);
   --color-2: hsl(var(--theme-color-h), var(--theme-color-s), 40%);
   --color-3: hsl(var(--theme-color-h), var(--theme-color-s), 80%);
   --color-4: hsl(var(--theme-color-h), var(--theme-color-s), 98%);
 }
+
 
 aside {
   position: fixed;
@@ -27,6 +25,19 @@ aside {
 main {
   margin-left: var(--sidebar-width);
   padding: 5vw 12vw;
+}
+
+@media screen and (max-width: 900px) {
+  aside {
+    position: static;
+    width: 100vw;
+    height: 9em;
+  }
+
+  main {
+    margin-left: 0;
+    padding: 5vw 6vw;
+  }
 }
 
 header > h1 {
@@ -62,11 +73,32 @@ article > h1 {
   text-align: center;
 }
 
+.toc::before {
+  content: "目录";
+  font-weight: bold;
+  font-size: medium;
+}
+
+.toc {
+  font-size: 11pt;
+}
+
+.toc, .toc ol {
+  padding-left: 1.5em;
+  list-style-type: none;
+}
+
 body {
   background-color: var(--color-4);
   color: var(--color-0);
   line-height: normal;
   font-family: var(--font-family);
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    font-size: 90%;
+  }
 }
 
 h1 {
@@ -94,6 +126,12 @@ a:hover {
   text-decoration-style: solid;
 }
 
+@media screen and (max-width: 900px) {
+  ol, ul {
+    padding-left: 1.5em;
+  }
+}
+
 img {
   max-width: 100%;
 }
@@ -101,24 +139,6 @@ img {
 blockquote {
   border-left: var(--color-1) solid;
   padding-left: 1em;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-thead {
-  border-bottom: 3px solid var(--color-3);
-  text-align: auto;
-}
-
-tr {
-  border-bottom: 1px solid var(--color-3);
-}
-
-th, td {
-  padding: 6px;
-  text-align: left;
 }
 
 code, pre {
@@ -137,4 +157,28 @@ code, pre {
 
 .highlight tr {
   border: none;
+}
+
+@media screen and (max-width: 900px) {
+  blockquote, figure {
+    margin: unset;
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+thead {
+  border-bottom: 3px solid var(--color-3);
+  text-align: auto;
+}
+
+tr {
+  border-bottom: 1px solid var(--color-3);
+}
+
+th, td {
+  padding: 6px;
+  text-align: left;
 }

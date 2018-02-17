@@ -4,8 +4,10 @@ block header
 block main
   include _include/mixins.pug
   article
+    if page.toc
+      != toc(page.content)
     +hljs_fix(page.content)
 prepend footer
   if site.data.mono.comment
     #comment
-      != site.data.mono.comment.replace("", "")
+      != site.data.mono.comment.replace(/MONOPAGEID/g, page.path)

@@ -14,9 +14,9 @@ social_links:
 icon: /favicon.ico
 
 # KaTeX 版本
-katex: 0.9.0-beta1
+katex:
 
-# 评论代码
+# 评论代码，`MONOPAGEID` 会被自动替换为页面 ID
 comment:
 
 # 版权
