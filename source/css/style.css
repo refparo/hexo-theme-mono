@@ -176,7 +176,7 @@ article {
 }
 
 article > h1 {
-  color: black;
+  color: var(--color-0);
 }
 
 .meta, #footer-info {
@@ -272,7 +272,7 @@ a {
 }
 
 a:hover {
-  color: black;
+  color: var(--color-1);
   text-decoration-style: solid;
 }
 
