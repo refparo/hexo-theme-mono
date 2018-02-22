@@ -219,6 +219,7 @@ body {
   color: var(--color-0);
   line-height: normal;
   font-family: var(--font-family);
+  font-feature-settings: "calt" 1;
 }
 
 @media screen and (max-width: 900px) {
