@@ -1,6 +1,6 @@
 extends _base.pug
 block header
-  h1 标签
+  h1= __('tags')
 block main
   - site.tags.each(tag => {
     a.tag(href=url_for(tag.path))= "#" + tag.name

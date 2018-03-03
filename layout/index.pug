@@ -1,6 +1,6 @@
 extends _base.pug
 block header
-  h1 主页
+  h1= __('home')
 block main
   include _include/mixins.pug
   - page.posts.each(post => {
@@ -10,12 +10,12 @@ block main
       +meta(post)
       if post.excerpt
         +hljs_fix(post.excerpt)
-        a(href=url_for(post.path) + "#more") 继续阅读»
+        a(href=url_for(post.path) + "#more")= __('read_on')
       else
         +hljs_fix(post.content)
         if site.data.mono.comment
-          a(href=url_for(post.path) + "#comment") 前往评论»
+          a(href=url_for(post.path) + "#comment")= __('go_to_comment')
   - })
   if page.total > 1
     nav#paginator
-      != paginator({prev_text: "« prev", next_text: "next »"})
+      != paginator({prev_text: __('prev_page'), next_text: __('next_page')})
