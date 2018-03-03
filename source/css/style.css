@@ -200,7 +200,6 @@ article > h1 {
 }
 
 .toc::before {
-  content: "目录";
   font-weight: bold;
   font-size: 15pt;
 }

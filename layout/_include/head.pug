@@ -10,6 +10,7 @@ if site.data.mono.icon
 != css('//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min')
 != css('//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css')
 != css('/css/style')
+style .toc::before { content: "#{__('toc_title')}"; }
 != css('/css/custom')
 if site.data.mono.katex
   != js(`//cdnjs.cloudflare.com/ajax/libs/KaTeX/${site.data.mono.katex}/katex.min`)
@@ -21,8 +22,8 @@ if site.data.mono.katex
         renderMathInElement(document.body, {
           throwOnError: false,
           delimiters: [
-            { left: '\$\$', right: '\$\$', display: true},
-            { left: '\$', right: '\$', display: false}
+            { left: '\$\$', right: '\$\$', display: true },
+            { left: '\$', right: '\$', display: false }
           ]
         })
       })
