@@ -7,16 +7,16 @@ title
   = config.title
 if site.data.mono.icon
   link(rel="shortcut icon" href=site.data.mono.icon type="image/x-icon")
-!= css('//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min')
+!= css('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min')
 if site.data.mono.social_links
-  != css('//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css')
+  != css('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min')
 != css('/css/style')
 style .toc::before { content: "#{__('toc_title')}"; }
 != css('/css/custom')
 if site.data.mono.katex
-  != js(`//unpkg.com/katex/dist/katex.min`)
-  != js(`//unpkg.com/katex/dist/contrib/auto-render.min`)
-  != css(`//unpkg.com/katex/dist/katex.min`)
+  != js('https://cdn.jsdelivr.net/npm/katex/dist/katex.min')
+  != js('https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min')
+  != css('https://cdn.jsdelivr.net/npm/katex/dist/katex.min')
   -
     const scriptCode = `
       document.addEventListener("DOMContentLoaded", () => {
