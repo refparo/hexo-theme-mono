@@ -1,10 +1,12 @@
 :root {
   --theme-color-h: 0;
   --theme-color-s: 4%;
-  --font-family: 'Segoe UI', Helvetica, Tahoma,
-    'PingFang SC', 'WenQuanYi Micro Hei', 'Microsoft Yahei UI', sans-serif;
-  --mono-font-family: Monaco, Consolas, 'Lucida Console',
-    'PingFang SC', 'WenQuanYi Micro Hei', 'Microsoft Yahei UI', monospace;
+  --font-family:
+    'Noto Sans', 'Open Sans', 'Droid Sans', 'Segoe UI', Verdana,
+    'Noto Sans CJK SC', 'Source Han Sans', 'PingFang SC', 'Microsoft Yahei', sans-serif;
+  --mono-font-family:
+    'Noto Sans Mono', 'Droid Sans Mono', 'Segoe UI Mono', Menlo
+    'Noto Sans CJK SC', 'Source Han Sans', 'PingFang SC', 'Microsoft Yahei', monospace;
   --sidebar-width: 16rem;
   --color-0: hsl(var(--theme-color-h), var(--theme-color-s), 10%);
   --color-1: hsl(var(--theme-color-h), var(--theme-color-s), 20%);
