@@ -266,6 +266,14 @@ hr {
   border-style: solid;
 }
 
+li > p:first-child {
+  margin-top: 0;
+}
+
+li > p:last-child {
+  margin-bottom: 0;
+}
+
 a {
   color: var(--color-2);
   text-decoration-style: dashed;
