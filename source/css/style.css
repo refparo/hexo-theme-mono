@@ -286,6 +286,10 @@ a:hover {
   text-decoration-style: solid;
 }
 
+span {
+  white-space: nowrap;
+}
+
 @media screen and (max-width: 900px) {
   ol, ul {
     padding-left: 1.5em;
