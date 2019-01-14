@@ -12,6 +12,10 @@
 if site.data.mono.social_links
   #social-links
     - _.forEach(site.data.mono.social_links, (link, name) => {
-      a(href=link target='_blank')
-        span(class=name)
+      if typeof link == 'object'
+        a(href=link.isV5 target='_blank')
+          span(class='fab fa-' + name)
+      else
+        a(href=link target='_blank')
+          span(class='fa fa-' + name)
     - })

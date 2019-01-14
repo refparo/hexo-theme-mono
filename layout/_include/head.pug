@@ -8,11 +8,14 @@ title
 if site.data.mono.icon
   link(rel="shortcut icon" href=site.data.mono.icon type="image/x-icon")
 != css('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min')
-if site.data.mono.social_links
-  link(rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-    crossorigin="anonymous")
+- const hasV5 = Object.values(site.data.mono.social_links).some(x => typeof x == 'object')
+- const hasV4 = Object.values(site.data.mono.social_links).some(x => typeof x == 'string')
+if hasV5
+  != css('https://use.fontawesome.com/releases/v5.6.3/css/all.css')
+  if hasV4
+    != css('https://use.fontawesome.com/releases/v5.6.3/css/v4-shims.css')
+else if hasV4
+  != css('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
 != css('/css/style')
 style .toc::before { content: "#{__('toc_title')}"; }
 != css('/css/custom')
